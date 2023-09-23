@@ -1,0 +1,10 @@
+<div class="container mx-auto px-5 flex flex-col pt-[30vh]">
+  <div class="flex flex-col w-full">
+    <h1 class="font-bold text-7xl text-blue-50 text-center">Tmaq</h1>
+    <p class="text-4xl text-blue-200 text-center">Everything for everything</p>
+  </div>
+  <div class="flex gap-4 mx-auto mt-6">
+    <%= link_to "Sign in", new_user_session_path, class: "bg-indigo-700 text-indigo-50 rounded-lg hover:bg-indigo-600 transition duration-250 p-3" %>
+    <%= link_to "Create account", new_user_registration_path, class: "bg-indigo-700 text-indigo-50 rounded-lg hover:bg-indigo-600 transition duration-250 p-3"%>
+  </div>
+</div>

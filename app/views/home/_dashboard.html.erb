@@ -1,0 +1,19 @@
+<div class="max-w-3xl w-full mx-auto mt-32 bg-gray-700 rounded-lg mb-auto h-96 p-8">
+  <% if current_user.bots.any? %>
+
+  <% else %>
+    <%= turbo_frame_tag :new_bot do %>
+      <h1 class="text-gray-200 text-gray-100"> No bots yet </h1>
+      <div class="mr-auto flex justify-start mt-4">
+        <%= link_to new_bot_path do %>
+          <div class="flex items-center gap-2 bg-indigo-500 text-indigo-100 p-1">
+            <div class="w-8">
+              <%= render Icons::PlusComponent.new %> 
+            </div>
+            Create Your First Bot
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

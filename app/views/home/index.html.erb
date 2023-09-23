@@ -1,8 +1,7 @@
-<div class="bg-gradient-to-r from-purple-500 to-blue-500 h-screen pt-24">
-  <div class="container mx-auto px-5 flex">
-    <div class="flex flex-col w-full">
-      <h1 class="font-bold text-7xl text-blue-50 text-center">Tmaq</h1>
-      <p class="text-4xl text-blue-200 text-center">Everything for everything</p>
-    </div>
-  </div>
+<div class="bg-gradient-to-r from-purple-500 to-blue-500 h-screen flex">
+  <% if !current_user %>
+    <%= render "guest_screen" %>
+  <% else %>
+    <%= render "dashboard" %>
+  <% end %>
 </div>
